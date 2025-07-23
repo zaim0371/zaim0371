@@ -1,4 +1,90 @@
-<!DOCTYPE html>  <html>  
+<!DOCTYPE html>
+<html>
+<head>
+  <title>dedek</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive;
+      background-color: #fff5f8;
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeIn 2s ease-in;
+    }
+
+    h1 {
+      color: #ff66a3;
+      font-size: 2em;
+      animation: bounce 1.5s infinite;
+    }
+
+    form {
+      margin-top: 20px;
+      animation: fadeInUp 1.5s ease forwards;
+    }
+
+    button {
+      background-color: #ffb6c1;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+    }
+
+    #hasil {
+      margin-top: 20px;
+      font-size: 1.2em;
+      color: #d63384;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>DEDEK SAYANG IJAY NDA!!!</h1>
+
+  <form id="quizForm">
+    <input type="radio" name="SAYANG" value="IYA"> IYA<br>
+    <input type="radio" name="SAYANG" value="BANGET"> BANGET<br>
+    <input type="radio" name="SAYANG" value="SAYANG SEKALI"> SAYANG SEKALI<br><br>
+
+    <button type="button" onclick="kirimJawaban()">Kirim Jawaban</button>
+  </form>
+
+  <p id="hasil"></p>
+
+  <script>
+    function kirimJawaban() {
+      const pilihan = document.querySelector('input[name=SAYANG]:checked');
+      const hasil = document.getElementById("hasil");
+      if (pilihan) {
+        hasil.textContent = "Jawaban kamu: " + pilihan.value + " 💖";
+      } else {
+        hasil.textContent = "Pilih dulu ya, sayangg 😚";
+      }
+    }
+  </script>
+</body>
+</html><!DOCTYPE html>  <html>  
 <head>  
   <title>dedek</title>  
 </head>  
