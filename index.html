@@ -1,1 +1,22 @@
-<!DOCTYPE html><html><head><title>Halo Zaim</title></head><body><h1>HAWO DEDEK INUT!</h1></body></html>
+<!DOCTYPE html>  <html>  
+<head>  
+  <title>dedek</title>  
+</head>  
+<body>  
+  <h1>DEDEK SAYANG IJAY NDA!!!</h1>    <form id="quizForm">  
+    <input type="radio" name="SAYANG" value=IYA> IYA<br>  
+    <input type="radio" name="SAYANG" value=BANGET> BANGET<br>  
+    <input type="radio" name="SAYANG" value=SAYANG SEKALI> SAYANG SEKALI<br><br>  <button type="button" onclick="kirimJawaban()">Kirim Jawaban</button>
+
+  </form>    <p id="hasil"></p>    <script>  
+    function kirimJawaban() {  
+      const pilihan = document.querySelector('input[name=SAYANG]:checked');  
+      const hasil = document.getElementById("hasil");  
+      if (pilihan) {  
+        hasil.textContent = "Jawaban kamu: " + pilihan.value;  
+      } else {  
+        hasil.textContent = "Pilih dulu ya!";  
+      }  
+    }  
+  </script>  </body>  
+</html><!DOCTYPE html><html><head><title>Halo Zaim</title></head><body><h1>HAWO DEDEK INUT!</h1></body></html>
